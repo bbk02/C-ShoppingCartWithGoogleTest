@@ -3,12 +3,12 @@ Create a sample shopping cart example and demonstrate use of Google Test for uni
 
 ## Compile and Run
 ### For source use following commands 
-  cmake CMakeLists.txt 
-	make
-	./ShoppingCart
+####  cmake CMakeLists.txt 
+####  make
+####  ./ShoppingCart
 ### For test use following commands 
-  cmake CMakeLists.txt 
-	make
-	./runTests
+####  cmake CMakeLists.txt 
+####  make
+####  ./runTests
 
 
