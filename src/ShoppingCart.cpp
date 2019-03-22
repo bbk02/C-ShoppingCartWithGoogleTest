@@ -7,21 +7,21 @@
 ShoppingCart::ShoppingCart()
 {
     for(int i=0;i<100;i++)
-    items[i] = NULL; // assign each array element to NULL
+    items[i] = NULL;
     itemsCount = 0;
 }
 
 void ShoppingCart::addItem(Item *tItem)
 {
-    items[itemsCount++] = tItem; //adding each item to array
+    items[itemsCount++] = tItem;
 }
 
 double ShoppingCart::totalPrice()
 {
     double totalPrice = 0;
-    for(int i=0; i<itemsCount; i++) //repeat until end of items array
-        totalPrice+=(items[i]->getQuantity()*items[i]->getPrice()); //calling price and quantity by get methods
-    return totalPrice; //return totalPrice
+    for(int i=0; i<itemsCount; i++)
+        totalPrice+=(items[i]->getQuantity()*items[i]->getPrice());
+    return totalPrice;
 }
 
 void ShoppingCart::displayItems() {

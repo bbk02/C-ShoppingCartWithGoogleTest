@@ -20,8 +20,8 @@ public:
     double finalPrice();
 
 private:
-    Item *items[100]; //declare 100 items of pointers
-    int itemsCount;//for end of array
+    Item *items[100];
+    int itemsCount;
 };
 
 
