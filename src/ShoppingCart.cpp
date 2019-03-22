@@ -50,7 +50,7 @@ double ShoppingCart::applyGST() {
     for(int i=0; i<itemsCount; i++){
         if(items[i]->getCategory() == "Electronics")
             gstAmount += (items[i]->getPrice() * (GST_ON_ELECTORNICS));
-        else if(items[i]->getCategory() == "Book")
+        else if(items[i]->getCategory() == "Stationary")
             gstAmount += (items[i]->getPrice() * (GST_ON_STATIONARY_ITEMS));
         else
             gstAmount += (items[i]->getPrice() * (GST_COMMON));
