@@ -4,10 +4,6 @@
 
 #include "ShoppingCart.h"
 
-#define GST_ON_STATIONARY_ITEMS 0.12
-#define GST_ON_ELECTORNICS 0.28
-#define GST_COMMON 0.18
-
 ShoppingCart::ShoppingCart()
 {
     for(int i=0;i<100;i++)
@@ -52,7 +48,12 @@ void ShoppingCart::removeItem(string itemToDelete) {
 double ShoppingCart::applyGST() {
     double gstAmount;
     for(int i=0; i<itemsCount; i++){
-        gstAmount += (items[i]->getPrice() * (GST_ON_STATIONARY_ITEMS));
+        if(items[i]->getCategory() == "Electronics")
+            gstAmount += (items[i]->getPrice() * (GST_ON_ELECTORNICS));
+        else if(items[i]->getCategory() == "Book")
+            gstAmount += (items[i]->getPrice() * (GST_ON_STATIONARY_ITEMS));
+        else
+            gstAmount += (items[i]->getPrice() * (GST_COMMON));
     }
     return gstAmount;
 }

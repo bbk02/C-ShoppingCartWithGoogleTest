@@ -3,10 +3,10 @@
 #include "ShoppingCart.h"
 
 int main() {
-    Item item1("Unix", "Book", 2, 600);
-    Item item2("CleanCode", "Book", 2, 600);
-    Item item3("TDD", "Book", 2, 600);
-    Item item4("XP", "Book", 2, 600);
+    Item item1("Unix", "Stationary", 2, 600);
+    Item item2("CleanCode", "Stationary", 2, 600);
+    Item item3("TDD", "Stationary", 2, 600);
+    Item item4("XP", "Stationary", 2, 600);
     ShoppingCart shoppingCart;
     shoppingCart.addItem(&item1);
     shoppingCart.addItem(&item2);

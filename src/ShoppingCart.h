@@ -4,6 +4,10 @@
 
 #include "Item.h"
 
+#define GST_ON_STATIONARY_ITEMS 0.12
+#define GST_ON_ELECTORNICS 0.28
+#define GST_COMMON 0.18
+
 class ShoppingCart {
 public:
     ShoppingCart();

@@ -10,7 +10,7 @@ TEST(Item,  givenAnEmptyShoppingCart_whenNoItemAdded_thenTotalItemQuantityIsZero
 
 TEST(Item, givenAnEmptyShoppingCart_whenOneItemAdded_thenRetunTotalPrice)
 {
-    Item item1("Unix", "Book", 1, 600);
+    Item item1("Unix", "Stationary", 1, 600);
     ShoppingCart shoppingCart;
     shoppingCart.addItem(&item1);
 
@@ -27,6 +27,13 @@ TEST(Item, givenAnEmptyShoppingCart_whenTwoItemsAdded_thenRetunTotalPrice)
     shoppingCart.addItem(&item2);
 
     ASSERT_EQ(2, item1.getQuantity());
-//    ASSERT_EQ(120, item1.getTotalPrice());
     ASSERT_EQ(420, shoppingCart.totalPrice());
+}
+
+TEST(Item, givenElectronicsItemAdded_whenAppliedGST_thenRelevantGSTGetsApplied)
+{
+    Item item1("USB Cable", "Electronics", 1, 300);
+    ShoppingCart shoppingCart;
+    shoppingCart.addItem(&item1);
+    ASSERT_EQ((item1.getPrice() * GST_ON_ELECTORNICS), shoppingCart.applyGST());
 }
