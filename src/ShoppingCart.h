@@ -9,11 +9,15 @@ public:
     ShoppingCart();
 
     void addItem(Item *tItem);
+    void displayItems();
+    void removeItem(Item *tItem, string itemToDelete);
     double totalPrice();
+    double applyGST();
+    double finalPrice();
 
 private:
     Item *items[100]; //declare 100 items of pointers
-    int items_count;//for end of array
+    int itemsCount;//for end of array
 };
 
 

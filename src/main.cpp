@@ -12,7 +12,13 @@ int main() {
     shoppingCart.addItem(&item2);
     shoppingCart.addItem(&item3);
     shoppingCart.addItem(&item4);
-    double totalPrice = shoppingCart.totalPrice();
-    cout<<"Total price is : "<<totalPrice;
+
+    cout << "Total Gross Price is : "<< shoppingCart.totalPrice() << endl;
+    cout << "Total GST : "<< shoppingCart.applyGST() << endl;
+    cout << "Total Price After GST is : "<< shoppingCart.finalPrice() << endl;
+
+    cout << "Display Added Items : " << endl;
+    shoppingCart.displayItems();
+
     return 0;
 }
