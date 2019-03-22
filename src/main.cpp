@@ -3,16 +3,16 @@
 #include "ShoppingCart.h"
 
 int main() {
-    Item a("Unix", "Book", 2, 600);
-    Item b("Unix", "Book", 2, 600);
-    Item c("Unix", "Book", 2, 600);
-    Item d("Unix", "Book", 2, 600);
-    ShoppingCart sc1;
-    sc1.addItem(&a);
-    sc1.addItem(&b);
-    sc1.addItem(&c);
-    sc1.addItem(&d);
-    double diff = sc1.totalPrice();
-    cout<<"Total price is : "<<diff;
+    Item item1("Unix", "Book", 2, 600);
+    Item item2("Unix", "Book", 2, 600);
+    Item item3("Unix", "Book", 2, 600);
+    Item item4("Unix", "Book", 2, 600);
+    ShoppingCart shoppingCart;
+    shoppingCart.addItem(&item1);
+    shoppingCart.addItem(&item2);
+    shoppingCart.addItem(&item3);
+    shoppingCart.addItem(&item4);
+    double totalPrice = shoppingCart.totalPrice();
+    cout<<"Total price is : "<<totalPrice;
     return 0;
 }

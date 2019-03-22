@@ -13,7 +13,7 @@ public:
 
 private:
     Item *items[100]; //declare 100 items of pointers
-    int arrayEnd;//for end of array
+    int items_count;//for end of array
 };
 
 
