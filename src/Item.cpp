@@ -6,6 +6,10 @@ using namespace std;
 
 Item::Item(){
     std::cout << "Hello From Constructor" << std::endl;
+    itemName="";
+    itemCategory="";
+    itemQuantity = 0;
+    itemPrice=0;
 }
 
 void Item::setName(string name) {
@@ -36,7 +40,9 @@ int Item::getQuantity() {
     return itemQuantity;
 }
 
+
 double Item::getPrice() {
+
     return itemPrice;
 }
 

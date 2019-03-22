@@ -19,6 +19,6 @@ double ShoppingCart::totalPrice()
 {
     double totalPrice = 0;
     for(int i=0; i<items_count; i++) //repeat until end of items array
-        totalPrice+=(items[i]->getQuantity()*items[i]->getPrice()); //calling price and quantity by get methods
+        totalPrice+=(items[i]->getQuantity() * items[i]->getPrice()); //calling price and quantity by get methods
     return totalPrice; //return totalPrice
 }

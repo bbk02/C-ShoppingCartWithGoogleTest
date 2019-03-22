@@ -1,7 +1,32 @@
 #include <gtest/gtest.h>
 #include "../src/Item.h"
+#include "../src/ShoppingCart.h"
 
-TEST(Item, Test_Empty_Cart)
+TEST(Item,  givenAnEmptyShoppingCart_whenNoItemAdded_thenTotalItemQuantityIsZero)
 {
-    ASSERT_EQ(1,1);
+    Item item;
+    ASSERT_EQ(0,item.getQuantity());
+}
+
+TEST(Item, givenAnEmptyShoppingCart_whenOneItemAdded_thenRetunTotalPrice)
+{
+    Item item1("Unix", "Book", 1, 600);
+    ShoppingCart shoppingCart;
+    shoppingCart.addItem(&item1);
+
+    ASSERT_EQ(1, item1.getQuantity());
+    ASSERT_EQ(600, shoppingCart.totalPrice());
+}
+
+TEST(Item, givenAnEmptyShoppingCart_whenTwoItemsAdded_thenRetunTotalPrice)
+{
+    Item item1("Pen", "Stationary", 2, 60);
+    Item item2("USB Cable", "Electronics", 1, 300);
+    ShoppingCart shoppingCart;
+    shoppingCart.addItem(&item1);
+    shoppingCart.addItem(&item2);
+
+    ASSERT_EQ(2, item1.getQuantity());
+//    ASSERT_EQ(120, item1.getTotalPrice());
+    ASSERT_EQ(420, shoppingCart.totalPrice());
 }
