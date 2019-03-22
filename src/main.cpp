@@ -4,9 +4,9 @@
 
 int main() {
     Item item1("Unix", "Book", 2, 600);
-    Item item2("Unix", "Book", 2, 600);
-    Item item3("Unix", "Book", 2, 600);
-    Item item4("Unix", "Book", 2, 600);
+    Item item2("CleanCode", "Book", 2, 600);
+    Item item3("TDD", "Book", 2, 600);
+    Item item4("XP", "Book", 2, 600);
     ShoppingCart shoppingCart;
     shoppingCart.addItem(&item1);
     shoppingCart.addItem(&item2);
@@ -19,6 +19,9 @@ int main() {
 
     cout << "Display Added Items : " << endl;
     shoppingCart.displayItems();
-
+    cout << "Remove Items : " << endl;
+    shoppingCart.removeItem("TDD");
+    cout << "Display Items After Removal : " << endl;
+    shoppingCart.displayItems();
     return 0;
 }

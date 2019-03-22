@@ -30,11 +30,11 @@ double ShoppingCart::totalPrice()
 
 void ShoppingCart::displayItems() {
     for(int i=0; i<itemsCount; i++){
-        std::cout << "Name: " << items[i]->getName() << " Category: " << items[i]->getCategory() << " Quantity: " << items[i]->getQuantity() << " Price: " << items[i]->getPrice() << endl;
+        std::cout << "Name: " << items[i]->getName() << "\t" << " Category: " << items[i]->getCategory() << "\t" << " Quantity: " << items[i]->getQuantity() << "\t" << " Price: " << items[i]->getPrice() << endl;
     }
 }
 
-void ShoppingCart::removeItem(Item *tItem, string itemToDelete) {
+void ShoppingCart::removeItem(string itemToDelete) {
     int i;
     for(i=0; i<itemsCount; i++){
         if(items[i]->getName() == itemToDelete){
@@ -42,9 +42,9 @@ void ShoppingCart::removeItem(Item *tItem, string itemToDelete) {
         }
     }
     if(i < itemsCount){
-        itemsCount = itemsCount - 4;
+        itemsCount = itemsCount - 1;
         for(int j=i; j<itemsCount; j++){
-            items[j] = items[j+4];
+            items[j] = items[j+1];
         }
     }
 }

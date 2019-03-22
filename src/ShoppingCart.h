@@ -10,7 +10,7 @@ public:
 
     void addItem(Item *tItem);
     void displayItems();
-    void removeItem(Item *tItem, string itemToDelete);
+    void removeItem(string itemToDelete);
     double totalPrice();
     double applyGST();
     double finalPrice();
