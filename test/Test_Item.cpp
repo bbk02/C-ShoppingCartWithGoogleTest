@@ -37,3 +37,13 @@ TEST(Item, givenElectronicsItemAdded_whenAppliedGST_thenRelevantGSTGetsApplied)
     shoppingCart.addItem(&item1);
     ASSERT_EQ((item1.getPrice() * GST_ON_ELECTORNICS), shoppingCart.applyGST());
 }
+
+TEST(Item, givenOneItemAdded_WhenOneItemRemoved_thenTotalItemQuantityIsZero)
+{
+    Item item1("USB Cable", "Electronics", 1, 300);
+    ShoppingCart shoppingCart;
+    shoppingCart.addItem(&item1);
+    ASSERT_EQ(1, item1.getQuantity());
+    shoppingCart.removeItem("USB Cable");
+    ASSERT_EQ(0, item1.getQuantity());
+}

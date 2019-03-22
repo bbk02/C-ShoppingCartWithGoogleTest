@@ -34,6 +34,7 @@ void ShoppingCart::removeItem(string itemToDelete) {
     int i;
     for(i=0; i<itemsCount; i++){
         if(items[i]->getName() == itemToDelete){
+            items[i]->setQuantity(0);
             break;
         }
     }
